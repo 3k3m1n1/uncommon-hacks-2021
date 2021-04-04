@@ -158,6 +158,7 @@ MonoBehaviour:
   band: 3
   startScale: 1
   scaleMultiplier: 10
+  useBuffer: 1
   audioVisualizer: {fileID: 690221117}
 --- !u!65 &255138235
 BoxCollider:
@@ -270,6 +271,7 @@ MonoBehaviour:
   band: 6
   startScale: 1
   scaleMultiplier: 10
+  useBuffer: 1
   audioVisualizer: {fileID: 690221117}
 --- !u!65 &353985372
 BoxCollider:
@@ -382,6 +384,7 @@ MonoBehaviour:
   band: 7
   startScale: 1
   scaleMultiplier: 10
+  useBuffer: 1
   audioVisualizer: {fileID: 690221117}
 --- !u!65 &609445469
 BoxCollider:
@@ -494,6 +497,7 @@ MonoBehaviour:
   band: 5
   startScale: 1
   scaleMultiplier: 10
+  useBuffer: 1
   audioVisualizer: {fileID: 690221117}
 --- !u!65 &620445733
 BoxCollider:
@@ -1116,6 +1120,15 @@ MonoBehaviour:
   - 0
   - 0
   frequencyBand:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  bufferBand:
   - 0
   - 0
   - 0
@@ -1889,6 +1902,7 @@ MonoBehaviour:
   band: 2
   startScale: 1
   scaleMultiplier: 10
+  useBuffer: 1
   audioVisualizer: {fileID: 690221117}
 --- !u!65 &1011130603
 BoxCollider:
@@ -2001,6 +2015,7 @@ MonoBehaviour:
   band: 4
   startScale: 1
   scaleMultiplier: 10
+  useBuffer: 1
   audioVisualizer: {fileID: 690221117}
 --- !u!65 &1187410308
 BoxCollider:
@@ -2154,8 +2169,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300059252}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.060698766, y: -0.6879379, z: 0.05792299, w: 0.7209036}
+  m_LocalPosition: {x: 162.44444, y: 31.913933, z: -14.674314}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2196,6 +2211,7 @@ MonoBehaviour:
   band: 1
   startScale: 1
   scaleMultiplier: 10
+  useBuffer: 1
   audioVisualizer: {fileID: 690221117}
 --- !u!65 &1735990766
 BoxCollider:
@@ -2308,6 +2324,7 @@ MonoBehaviour:
   band: 0
   startScale: 1
   scaleMultiplier: 10
+  useBuffer: 1
   audioVisualizer: {fileID: 690221117}
 --- !u!65 &1809605855
 BoxCollider:

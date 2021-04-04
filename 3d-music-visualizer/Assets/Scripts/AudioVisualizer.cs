@@ -11,6 +11,8 @@ public class AudioVisualizer : MonoBehaviour
     AudioSource audioSource;
     public float[] samples = new float[512];
     public float[] frequencyBand = new float[8];
+    public float[] bufferBand = new float[8];
+    float[] bufferDecrease = new float[8];    // speed to smooth frequency values back down, instead of jittering
 
     // Start is called before the first frame update
     void Start()
@@ -22,21 +24,23 @@ public class AudioVisualizer : MonoBehaviour
     void Update()
     {
         audioSource.GetSpectrumData(samples, 0, FFTWindow.Blackman);
-        MakeFrequencyBands();
+        Simplify512BandsTo8();
+        BufferBandValues();
     }
 
-    void MakeFrequencyBands()
+    void Simplify512BandsTo8()
     {
         /*
          * 22050 Hz / 512 samples = 43 Hz per sample
          *
-         * 20 - 60 hertz
-         * 60 - 250 hertz
-         * 250 - 500 hertz
-         * 500 - 2000 hertz
-         * 2000 - 4000 hertz
-         * 4000 - 6000 hertz
-         * 6000 - 20000 hertz
+         * sub bass: 20 - 60 hertz
+         * bass: 60 - 250 hertz
+         * low midrange: 250 - 500 hertz
+         * midrange: 500 - 2000 hertz
+         * upper midrange: 2000 - 4000 hertz
+         * presence: 4000 - 6000 hertz
+         * brilliance: 6000 - 20000 hertz
+         *
          *
          */
 
@@ -60,6 +64,30 @@ public class AudioVisualizer : MonoBehaviour
             average /= count;
 
             frequencyBand[i] = average * 10;
+        }
+    }
+
+    // this function smoothly lowers the amplitude values for each frequency band (bar)
+    // looks way better and less jittery!
+    void BufferBandValues()
+    {
+        for (int g = 0; g < 8; g++)
+        {
+            if (frequencyBand[g] > bufferBand[g])
+            {
+                bufferBand[g] = frequencyBand[g];
+                bufferDecrease[g] = .005f;
+            }
+
+            if (frequencyBand[g] < bufferBand[g])
+            {
+                //bufferBand[g] -= bufferDecrease[g];
+                //bufferDecrease[g] *= 1.2f;
+
+                // suggestion in the comments: creates a softer effect where the buffer slows down the more it decreases
+                bufferDecrease[g] = (bufferBand[g] - frequencyBand[g]) / 8;
+                bufferBand[g] -= bufferDecrease[g];
+            }
         }
     }
 }
