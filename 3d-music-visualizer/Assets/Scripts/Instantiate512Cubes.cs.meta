@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ac46c7b464c01476988f9a5bc9880603
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cubePrefab: {fileID: 5190777769287122253, guid: 14eceba73efd94ac2b46563ed87f6276, type: 3}
+  - audioVisualizer: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
