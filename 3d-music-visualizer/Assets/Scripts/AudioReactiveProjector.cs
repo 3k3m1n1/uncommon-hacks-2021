@@ -22,7 +22,7 @@ public class AudioReactiveProjector : MonoBehaviour
     //}
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         // spike the playback speed when the "bass" band passes a certain threshold
         if (audioVisualizer.bufferBand[speedBand] > speedBias)
@@ -30,9 +30,7 @@ public class AudioReactiveProjector : MonoBehaviour
             videoPlayer.playbackSpeed = maxPlaybackSpeed;
             speedDecrease = .05f;
         }
-
-        // falloff
-        if (audioVisualizer.bufferBand[speedBand] < speedBias)
+        else if (audioVisualizer.bufferBand[speedBand] < speedBias)          // falloff
         {
             if (videoPlayer.playbackSpeed > minPlaybackSpeed)
             {

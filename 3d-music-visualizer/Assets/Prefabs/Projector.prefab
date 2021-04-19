@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5714105263593877367}
-  m_LocalRotation: {x: -0, y: -0.9232622, z: -0, w: 0.3841706}
+  m_LocalRotation: {x: 0, y: -0.9232605, z: 0, w: 0.38417456}
   m_LocalPosition: {x: 0, y: 5.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -44,15 +44,15 @@ Projector:
   m_Enabled: 1
   serializedVersion: 2
   m_NearClipPlane: 0.1
-  m_FarClipPlane: 20
-  m_FieldOfView: 113.02
+  m_FarClipPlane: 53.7
+  m_FieldOfView: 76.55
   m_AspectRatio: 1
   m_Orthographic: 0
-  m_OrthographicSize: 2.4
+  m_OrthographicSize: 28.9
   m_Material: {fileID: 2100000, guid: 732328a91c9d2425dacda5806a986e9d, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2
 --- !u!114 &5714105263593877362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5714105263593877367}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdc87e1d3995547058a94999943fa15f, type: 3}
   m_Name: 
@@ -103,7 +103,7 @@ VideoPlayer:
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!328 &5714105263593877363
@@ -136,6 +136,6 @@ VideoPlayer:
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
